@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ingatlan.com - A legtöbb ingatlan egy helyen.</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="https://realestatehungary.hu/images/logo.svg" href="#" alt="">
+    </div>
+    <div class="header-right">
+      <a href="#">Appoint an Agent</a>
+      <button id="post">Post Your Listing</button>
+    </div>
+
+  </div>
+  <div class="top-container">
+    <div class="intro-text">
+      <h1>Every real estate listing, all in one place.</h1>
+      <h3>Sok ezer kiváló ingatlanos online munkahelye. Köszönjük nekik.</h3>
+    </div>
+  </div>
+  <div class="search-container">
+    <form action="" method="" id="searchform" autocomplete="off">
+      <div class="radio-box">
+        <input type="radio" id="rent" name="rentorsale" value="rent" checked="checked" />
+        <label for="rent">For Rent</label>
+        <input type="radio" id="sale" name="rentorsale" value="sale" />
+        <label for="sale">For Sale</label>
+      </div>
+      <div class="property-type-container">
+        <select name="property-type" id="property-type">
+          <option value="apartment" selected="selected"> apartment </option>
+          <option value="house"> house </option>
+          <option value="lot"> lot </option>
+          <option value="garage"> garage </option>
+          <option value="vacation-home"> vacation home </option>
+          <option value="office"> office </option>
+          <option value="retail-unit"> retail unit </option>
+          <option value="hotel"> hotel </option>
+          <option value="warehouse"> warehouse </option>
+          <option value="commercial"> commercial </option>
+          <option value="agricultural"> agricultural </option>
+          <option value="development-site"> development site </option>
+          <option value="institution"> institution </option>
+        </select>
+      </div>
+      <div class="search-box">
+        <input type="search" name="search" id="search">
+        <div>
+          <ul id="selected-options">
+
+          </ul>
+        </div>
+        <div class="tab-menu-container">
+          <div class="tabbar">
+            <a class="tabitems active" name="budapest">Budapest</a>
+            <a class="tabitems" name="balaton">Balaton</a>
+            <a class="tabitems" name="other">Counties and Cities</a>
+            <a class="tabitems" name="history">History</a>
+          </div>
+
+          <div id="budapest" class="submenu visible">
+            <div class="links-container">
+              <div class="column">
+                <ul>
+                  <h3>Buda</h3>
+                  <li>
+                    <a>District I</a>
+                  </li>
+                  <li>
+                    <a>District II</a>
+                  </li>
+                  <li>
+                    <a>District III</a>
+                  </li>
+                  <li>
+                    <a>District XI</a>
+                  </li>
+                  <li>
+                    <a>District XII</a>
+                  </li>
+                  <li>
+                    <a>District XXII</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <h3>Pest</h3>
+                <ul>
+                  <li>
+                    <a>District IV</a>
+                  </li>
+                  <li>
+                    <a>District V</a>
+                  </li>
+                  <li>
+                    <a>District VI</a>
+                  </li>
+                  <li>
+                    <a>District VII</a>
+                  </li>
+                  <li>
+                    <a>District VIII</a>
+                  </li>
+                  <li>
+                    <a>District IX</a>
+                  </li>
+                  <li>
+                    <a>District X</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <h3>
+                  <span>&#8203;</span>
+                </h3>
+                <ul>
+                  <li>
+                    <a>District XIII</a>
+                  </li>
+                  <li>
+                    <a>District XIV</a>
+                  </li>
+                  <li>
+                    <a>District XV</a>
+                  </li>
+                  <li>
+                    <a>District XVI</a>
+                  </li>
+                  <li>
+                    <a>District XVII</a>
+                  </li>
+                  <li>
+                    <a>District XVIII</a>
+                  </li>
+                  <li>
+                    <a>District XIX</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <h3>
+                  <span>&#8203;</span>
+                </h3>
+                <ul>
+                  <li>
+                    <a>District XX</a>
+                  </li>
+                  <li>
+                    <a>District XXI</a>
+                  </li>
+                  <li>
+                    <a>District XXIII</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div id="balaton" class="submenu">
+            <div class="links-container">
+              <div class="column">
+                <ul>
+                  <h3>Balaton</h3>
+                  <li>
+                    <a>North shore</a>
+                  </li>
+                  <li>
+                    <a>Balaton Uplands</a>
+                  </li>
+                  <li>
+                    <a>Déli part</a>
+                  </li>
+                  <li>
+                    <a>Déli part környéke</a>
+                  </li>
+                  <li>
+                    <a>Around Hévíz</a>
+                  </li>
+                  <li>
+                    <a>Kis-Balaton area</a>
+                  </li>
+                  <li>
+                    <a>Veszprém</a>
+                  </li>
+                  <li>
+                    <a>Siófok</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul>
+                  <h3>
+                    <span>&#8203;</span>
+                  </h3>
+                  <li>
+                    <a>Keszthely</a>
+                  </li>
+                  <li>
+                    <a>Balatonalmádi</a>
+                  </li>
+                  <li>
+                    <a>Balatonfüred</a>
+                  </li>
+                  <li>
+                    <a>Balatonlelle</a>
+                  </li>
+                  <li>
+                    <a>Tapolca</a>
+                  </li>
+                  <li>
+                    <a>Balatonboglár</a>
+                  </li>
+                  <li>
+                    <a>Fonyód</a>
+                  </li>
+                  <li>
+                    <a>Balatonföldvár</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div id="other" class="submenu">
+            <div class="links-container">
+              <div class="column">
+                <ul>
+                  <h3>Counties</h3>
+                  <li>
+                    <a>Bács-Kiskun</a>
+                  </li>
+                  <li>
+                    <a>Baranya</a>
+                  </li>
+                  <li>
+                    <a>Békés</a>
+                  </li>
+                  <li>
+                    <a>Borsod-Abaúj-Zemplén</a>
+                  </li>
+                  <li>
+                    <a>Budapest</a>
+                  </li>
+                  <li>
+                    <a>Csongrád</a>
+                  </li>
+                  <li>
+                    <a>Fejér</a>
+                  </li>
+                  <li>
+                    <a>Győr-Moson-Sopron</a>
+                  </li>
+                  <li>
+                    <a>Hajdú-Bihar</a>
+                  </li>
+                  <li>
+                    <a>Heves</a>
+                  </li>
+                  <li>
+                    <a>Jász-Nagykun-Szolnok</a>
+                  </li>
+              </div>
+              <div class="column">
+                <ul>
+                  <h3>
+                    <span>&#8203;</span>
+                  </h3>
+                  <li>
+                    <a>Komárom-Esztergom</a>
+                  </li>
+                  <li>
+                    <a>Nógrád</a>
+                  </li>
+                  <li>
+                    <a>Pest megye</a>
+                  </li>
+                  <li>
+                    <a>Pest county - greater Buda area</a>
+                  </li>
+                  <li>
+                    <a>Pest county - greater Pest area</a>
+                  </li>
+                  <li>
+                    <a>Somogy</a>
+                  </li>
+                  <li>
+                    <a>Szabolcs-Szatmár-Bereg</a>
+                  </li>
+                  <li>
+                    <a>Tolna</a>
+                  </li>
+                  <li>
+                    <a>Vas</a>
+                  </li>
+                  <li>
+                    <a>Veszprém</a>
+                  </li>
+                  <li>
+                    <a>Zala</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="history" class="submenu">
+            <div class="links-container">
+              <div class="column">
+                <ul>
+                  <h3>History</h3>
+                  <li>
+                    <a>District XIII</a>
+                  </li>
+                  <li>
+                    <a>District XIV</a>
+                  </li>
+                  <li>
+                    <a>District XV</a>
+                  </li>
+                  <li>
+                    <a>District XVI</a>
+                  </li>
+                  <li>
+                    <a>District XVII</a>
+                  </li>
+                  <li>
+                    <a>District XVIII</a>
+                  </li>
+                  <li>
+                    <a>District XIX</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul>
+                  <h3>
+                    <span>&#8203;</span>
+                  </h3>
+                  <li>
+                    <a>Komárom-Esztergom</a>
+                  </li>
+                  <li>
+                    <a>Nógrád</a>
+                  </li>
+                  <li>
+                    <a>Pest megye</a>
+                  </li>
+                  <li>
+                    <a>Pest county - greater Buda area</a>
+                  </li>
+                  <li>
+                    <a>Pest county - greater Pest area</a>
+                  </li>
+                  <li>
+                    <a>Somogy</a>
+                  </li>
+                  <li>
+                    <a>Szabolcs-Szatmár-Bereg</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price">
+        <input type="text" name="price" id="price" placeholder="price">
+      </div>
+      <div class="area">
+        <input type="text" name="area" id="area" placeholder="floor area">
+      </div>
+      <div class="rooms">
+        <select name="rooms" id="rooms">
+          <option value="" disabled selected>szobaszám</option>
+          <option value="any"> mindegy </option>
+          <option value="1-room"> 1+ szoba </option>
+          <option value="2-rooms"> 2+ szoba </option>
+          <option value="3-rooms"> 3+ szoba </option>
+          <option value="4-rooms"> 4+ szoba </option>
+          <option value="5-rooms"> 5+ szoba </option>
+        </select>
+      </div>
+      <div class="search-button">
+        <i class="fas fa-search"></i>
+        <input type="submit" name="search-button" id="search-button" value="">
+      </div>
+  </div>
+  </form>
+  </div>
+  <div class="ad-container">
+    <div class="ad-inner">
+      <div class="ad-inner-left">
+        <h2>Lakóparkba költöznél?</h2>
+        <div class="box one">
+          <div class="innergrad">
+            <h3>Young City – Modern életre tervezve</h3>
+            <p>Modern, fiatalos okosotthonok multifunkcionális közösségi térrel, parkosított kerttel, a XIII. kerület zöld övezetében!</p>
+          </div>
+        </div>
+        <div class="box two">
+          <div class="innergrad">
+            <h3>Zala Springs Golf Resort We found it! You discover it!</h3>
+            <p>Exkluzivitás kívül-belül! Otthon és befektetés - egy Európában is kimagasló minőségű golfpályán! Panorámás lakások
+              az Ön igényeire szabva!</p>
+          </div>
+        </div>
+        <div class="box three">
+          <div class="innergrad">
+            <h3>Sasad Resort – Otthon a család</h3>
+            <p>80% természet, saját 8000 nm-es élménypark várja csupán 10 percre a 4-es metrótól, Újbuda legzöldebb lakóparkjában!</p>
+          </div>
+        </div>
+        <div class="box four">
+          <div class="innergrad">
+            <h3>Duna Terasz Premium, XIII. kerület</h3>
+            <p>Ahol a Duna a szomszédod. Napfényes, teraszos lakások, konyhabútorral. Hatalmas belső park, M3-as metró közelében.
+              Több, mint 50 % elkelt. +36 1 215 55 55</p>
+          </div>
+        </div>
+      </div>
+      <div class="ad-inner-right">
+        <button>Próbáld ki lakópark keresőnket!</button>
+        <div class="box five">
+          <div class="innergrad">
+            <h3>Duna Terasz Premium, XIII. kerület</h3>
+            <p>Ahol a Duna a szomszédod. Napfényes, teraszos lakások, konyhabútorral. Hatalmas belső park, M3-as metró közelében.
+              Több, mint 50 % elkelt. +36 1 215 55 55</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="individuals">
+
+        <ul>
+          <h3>Magánszemélyeknek</h3>
+          <h4>POST YOUR LISTING</h4>
+          <li>
+            <a href="#">Árak és hirdetési lehetőségek</a>
+          </li>
+          <li>
+            <a href="#">Payment Options</a>
+          </li>
+          <li>
+            <a href="#">Hirdetőtábla</a>
+          </li>
+        </ul>
+
+        <ul>
+          <h3>
+            <span>&#8203;</span>
+          </h3>
+          <h4>Ingatlanoskereső</h4>
+          <li>
+            <a href="#">Lakáshitel-kalkulátor</a>
+          </li>
+          <li>
+            <a href="#">Energy Performance Certificate</a>
+          </li>
+          <li>
+            <a href="#">Alaprajztervező</a>
+          </li>
+        </ul>
+      </div>
+      <div class="agent">
+        <ul>
+          <h3>For Agents</h3>
+          <h4>Belépés közvetítőknek</h4>
+          <li>
+            <a href="#">Árak és hirdetési lehetőségek</a>
+          </li>
+          <li>
+            <a href="#">Payment options</a>
+          </li>
+          <li>
+            <a href="#">Registration for realtors</a>
+          </li>
+        </ul>
+      </div>
+      <div class="team">
+        <ul>
+          <h3>Csapatunk</h3>
+          <li>
+            <a href="#">Company History</a>
+          </li>
+          <li>
+            <a href="#">Our mission</a>
+          </li>
+          <li>
+            <a href="#">Kik vagyunk</a>
+          </li>
+          <li>
+            <a href="#">In the News</a>
+          </li>
+          <li>
+            <a href="#">Jobs</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="contact">
+        <ul>
+          <h3>Contact</h3>
+          <li>
+            <a href="#">+36 1 237 2060</a>
+          </li>
+          <li>
+            <a href="#">munkanapokon 10:00-17:00-ig</a>
+          </li>
+          <li>
+            <a href="#">Összes elérhetőségünk</a>
+          </li>
+          <li>
+            <a href="#">Media kit</a>
+          </li>
+          <li>
+            <a href="#">Visszajelzés küldése</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        <h4>KERESS MOBILON BÁRHOL, BÁRMIKOR</h4>
+        <p>Próbáld ki mobil alkalmazásunkat, és találd meg új otthonod Magyarország legnagyobb ingatlankínálatában. További
+          információ
+        </p>
+      </div>
+      <div class="footer-bottom-logos">
+        <img src="https://ingatlan.com/images/store-badge-apple.svg" alt="">
+        <img src="https://ingatlan.com/images/store-badge-google.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="copyright-container">
+    <div class="copyright-left">
+      <ul>
+        <li>
+          <a href="#">© ingatlan.com - 1999 - 2018 </a>
+        </li>
+        <li>
+          <a href="#">Általános Szolgáltatási Feltételek</a>
+        </li>
+        <li>
+          <a href="#">Adatvédelmi Szabályzat</a>
+        </li>
+        <li>
+          <a href="#">Mobile view</a>
+        </li>
+        <li>
+          <a href="#">Facebook</a>
+        </li>
+      </ul>
+    </div>
+    <div class="copyright-right">
+      <ul>
+        <li>
+          <a href="#">Magyar</a>
+        </li>
+        <li>
+          <a href="#">English</a>
+        </li>
+        <li>
+          <a href="#">Deutsch</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
