@@ -76,6 +76,10 @@ button {
   font-weight: 400;
 }
 
+.intro-text {
+  padding: 30px;
+}
+
 .search-container {
   background-color: #313745;
   height: 100px;
@@ -93,8 +97,8 @@ button {
   margin: 0 auto;
   width: 80%;
   display: flex;
-  align-content: center;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .radio-box {
@@ -133,9 +137,6 @@ button {
 .tab-menu-container {
   margin: 0 20px;
   position: absolute;
-  top: 410px;
-  left: 300px;
-  width: 420px;
   display: none;
 }
 
@@ -196,16 +197,13 @@ button {
 
 #selected-options {
   position: absolute;
-  left: 330px;
-  top: 379px;
+
 }
 
 #selected-options li {
   background-color: #ddd;
   font-size: 14px;
   display: inline;
-  margin-right: 10px;
-  padding: 5px 10px;
   border-radius: 2px;
   list-style-type: none;
   color: #404041;
@@ -230,7 +228,7 @@ button {
 
 #search {
   height: 40px;
-  width: 420px;
+  flex-grow: 2;
 }
 
 .price, .area, .rooms {
@@ -241,28 +239,24 @@ button {
 
 .price input[type="text"], .area input[type="text"], .rooms input[type="text"] {
   height: 36px;
-  width: 80px;
+  flex-grow: 1;
 }
 
 .search-button {
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-#search-button {
   height: 40px;
   background-color: #d35630;
   width: 60px;
   border: none;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  display: flex;
+  justify-content: center;
 }
 
 .search-button i {
-  display: inline;
-  margin-right: -35px;
-  padding-left: 17.5px;
   color: #fff;
   z-index: 10;
 }
@@ -270,7 +264,6 @@ button {
 .ad-container {
   margin: 0 auto;
   padding: 40px;
-  height: 375px;
   background-color: #eeeeee;
   display: flex;
   align-items: center;
@@ -452,4 +445,73 @@ hr {
 .innergrad {
   height: 130px;
   background: linear-gradient(to right, #fff 60%, rgba(255, 255, 255, 0) 85%);
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .header-right {
+    min-height: 70px;
+    padding: 20px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+  .search-container {
+    height: auto;
+    padding: 20px 0;
+  }
+  .search-container form {
+    height: auto;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    align-content: center;
+  }
+  #rooms, .property-type-container, #property-type, .search-button {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+    border-radius: 0;
+  }
+ .property-type-container {
+   margin: 0
+ } 
+
+  .radio-box {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  input[type="search"], input[type="text"] {
+    margin-bottom: 10px;
+  }
+
+  .radio-box label {
+    padding: 0 10px;
+  }
+  #sale {
+    margin-left: 30px;
+  }
+
+  .ad-inner {
+    min-width: 280px;
+    flex-direction: column;
+  }
+
+  .ad-inner-left, .ad-inner-right {
+    justify-content: center;
+    align-items: center;
+  }
 }

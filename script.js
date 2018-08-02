@@ -5,8 +5,11 @@ const menu = document.querySelector('.tab-menu-container');
 
 window.addEventListener('click', function (event) {
   if (event.target === search || menu.contains(event.target)) {
+    menu.style.top = `${event.pageY + 18}px`;
     menu.classList.add('visible');
+    
   } else {
+    menu.classList.remove('visible');
   }
 });
 
