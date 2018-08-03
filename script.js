@@ -2,15 +2,24 @@
  --------------------------------------------------- */
 const search = document.querySelector('#search');
 const menu = document.querySelector('.tab-menu-container');
+const searchPos = search.getBoundingClientRect().bottom
 
 window.addEventListener('click', function (event) {
-  if (event.target === search || menu.contains(event.target)) {
-    menu.style.top = `${event.pageY + 18}px`;
-    menu.classList.add('visible');
-    
-  } else {
+  if (menu.contains(event.target) === false) {
     menu.classList.remove('visible');
   }
+
+});
+
+window.addEventListener('click', function (event) {
+  if (event.target === search) {
+    menu.classList.add('visible');
+
+    console.log(search.getBoundingClientRect())
+    menu.style.left = `${search.getBoundingClientRect().left - 20}px`;
+    menu.style.top = `${search.getBoundingClientRect().bottom + this.pageYOffset}px`;
+  }
+
 });
 
 /* Run a function on menu tabs click

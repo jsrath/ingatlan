@@ -197,13 +197,14 @@ button {
 
 #selected-options {
   position: absolute;
-
 }
 
 #selected-options li {
   background-color: #ddd;
   font-size: 14px;
   display: inline;
+  margin-right: 10px;
+  padding: 5px 10px;
   border-radius: 2px;
   list-style-type: none;
   color: #404041;
@@ -271,10 +272,10 @@ button {
 }
 
 .ad-inner {
-  width: 76.8%;
+  width: 75%;
   display: flex;
   align-content: center;
-  justify-content: space-around;
+  justify-content: center;
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 10px;
@@ -283,13 +284,8 @@ button {
 .ad-inner-left {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 2;
   color: #404041;
-}
-
-.ad-inner-left h2 {
-  font-weight: 400;
-  padding-bottom: 15px;
+  width: auto;
 }
 
 .box {
@@ -312,31 +308,32 @@ button {
 }
 
 .one {
-  background: no-repeat right url('https://icom-frontend-banners.s3.eu-central-1.amazonaws.com/start-page-banners/1c5d9deddb5041683a567183d97b9b4b50a12d4f.jpg')
+  background: no-repeat right url('./images/1.jpg')
 }
 
 .two {
-  background: no-repeat right url('https://icom-frontend-banners.s3.eu-central-1.amazonaws.com/start-page-banners/b54a7d4b092572db21fff96a2c4a19443d46646d.jpg')
+  background: no-repeat right url('./images/2.jpg')
 }
 
 .three {
-  background: no-repeat right url('https://icom-frontend-banners.s3.eu-central-1.amazonaws.com/start-page-banners/8c6ea3aa984653cd24bb2f4c0534a09db196a559.jpg')
+  background: no-repeat right url('./images/3.jpg')
 }
 
 .four {
-  background: no-repeat right url('https://icom-frontend-banners.s3.eu-central-1.amazonaws.com/start-page-banners/4d982c59e642b8bbbc1426b9a81c544865c66af7.jpg')
+  background: no-repeat right url('./images/4.jpg')
 }
 
 .five {
-  background: no-repeat right url('https://icom-frontend-banners.s3.eu-central-1.amazonaws.com/start-page-banners/1caec4efc350f6df4596287711f6483cd638d38a.jpg')
+  background: no-repeat right url('./images/5.jpg')
 }
 
 .ad-inner-left h2 {
   width: 100%;
+  font-weight: 400;
+  padding-bottom: 15px;
 }
 
 .ad-inner-right {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -415,30 +412,26 @@ hr {
 }
 
 .copyright-container {
-  height: 50px;
+  padding: 25px;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.copyright-left li {
-  display: inline;
+.copyright-left, .copyright-right {
+  display: flex;
+  justify-content: center;
+}
+
+.copyright-left li, .copyright-right li {
   font-size: 12px;
   padding: 0 10px;
-}
-
-.copyright-left a {
-  text-decoration: none;
-}
-
-.copyright-right li {
+  list-style-type: none;
   display: inline;
-  font-size: 12px;
-  padding: 0 10px;
 }
 
-.copyright-right a {
+.copyright-left a, .copyright-right a {
   text-decoration: none;
 }
 
@@ -448,7 +441,6 @@ hr {
 }
 
 @media only screen and (max-width: 1000px) {
-
   .header-container {
     flex-direction: column;
     justify-content: center;
@@ -456,7 +448,6 @@ hr {
     height: auto;
     padding: 20px 0;
   }
-
   .header-right {
     min-height: 70px;
     padding: 20px 0;
@@ -481,10 +472,9 @@ hr {
     margin-bottom: 10px;
     border-radius: 0;
   }
- .property-type-container {
-   margin: 0
- } 
-
+  .property-type-container {
+    margin: 0
+  }
   .radio-box {
     flex-direction: row;
     justify-content: center;
@@ -493,25 +483,65 @@ hr {
     height: auto;
     margin-bottom: 20px;
   }
-
-  input[type="search"], input[type="text"] {
+  .price, .search-box, .area, .rooms {
+    width: 100%;
     margin-bottom: 10px;
   }
-
   .radio-box label {
     padding: 0 10px;
   }
   #sale {
     margin-left: 30px;
   }
-
   .ad-inner {
     min-width: 280px;
     flex-direction: column;
   }
-
   .ad-inner-left, .ad-inner-right {
     justify-content: center;
     align-items: center;
+  }
+  .footer-top, .footer-bottom {
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-start;
+  }
+  .footer-bottom-text h4 {
+    padding: 20px 0;
+  }
+  .footer-bottom-logos {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .footer-bottom-logos img {
+    padding: 10px 0;
+  }
+  .individuals {
+    flex-direction: column;
+  }
+  .individuals span {
+    display: none;
+  }
+  .copyright-container {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .copyright-left, .copyright-right {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .copyright-left li, .copyright-right li {
+    display: block;
+    padding: 5px 0;
+  }
+  .footer-top h3, .footer-top h4 {
+    margin: 20px 0;
   }
 }
