@@ -217,9 +217,12 @@ button {
   display: flex;
   justify-content: space-around;
   z-index: 11;
+  background-color: #fff;
 }
 
 .column {
+  background-color: #fff;
+  z-index: 20;
   margin: 5px;
 }
 
@@ -263,7 +266,7 @@ button {
 
 .search-button i {
   color: #fff;
-  z-index: 10;
+  z-index: 1;
 }
 
 .ad-container {
@@ -292,7 +295,7 @@ button {
   width: auto;
 }
 
-.box {
+.featured-container {
   width: 280px;
   height: 130px;
   border: 1px solid #ddd;
@@ -300,35 +303,35 @@ button {
   margin: 5px;
 }
 
-.box h3 {
+.featured-container h3 {
   padding: 10px 20px 0 10px;
   font-size: 14px;
 }
 
-.box p {
+.featured-container p {
   padding: 10px 100px 10px 10px;
   font-size: 12px;
   line-height: 14px;
 }
 
 .one {
-  background: no-repeat right url('./images/1.jpg')
+  background: no-repeat right url('./images/right1.jpg')
 }
 
 .two {
-  background: no-repeat right url('./images/2.jpg')
+  background: no-repeat right url('./images/right2.jpg')
 }
 
 .three {
-  background: no-repeat right url('./images/3.jpg')
+  background: no-repeat right url('./images/right3.jpg')
 }
 
 .four {
-  background: no-repeat right url('./images/4.jpg')
+  background: no-repeat right url('./images/right4.jpg')
 }
 
 .five {
-  background: no-repeat right url('./images/5.jpg')
+  background: no-repeat right url('./images/right5.jpg')
 }
 
 .ad-inner-left h2 {
@@ -505,6 +508,9 @@ hr {
     justify-content: center;
     align-items: center;
   }
+  .ad-inner-left h2 {
+    text-align: center;
+  }
   .footer-top, .footer-bottom {
     flex-direction: column;
     width: 50%;
@@ -528,6 +534,10 @@ hr {
   }
   .individuals span {
     display: none;
+  }
+  .individuals ul:first-child {
+    margin-left: -10px;
+    padding: 0
   }
   .copyright-container {
     flex-direction: column;
