@@ -2,11 +2,19 @@
  --------------------------------------------------- */
 const search = document.querySelector('#search');
 const menu = document.querySelector('.tab-menu-container');
-const searchPos = search.getBoundingClientRect().bottom
 
 window.addEventListener('click', function (event) {
   if (menu.contains(event.target) === false) {
     menu.classList.remove('visible');
+  }
+
+  /* Set placeholder text
+ --------------------------------------------------- */
+
+  if (document.querySelector('#selected-options li')) {
+    search.placeholder = '';
+  } else {
+    search.placeholder = 'Select Locations';
   }
 
 });
@@ -14,10 +22,9 @@ window.addEventListener('click', function (event) {
 window.addEventListener('click', function (event) {
   if (event.target === search) {
     menu.classList.add('visible');
-
-    console.log(search.getBoundingClientRect())
     menu.style.left = `${search.getBoundingClientRect().left - 20}px`;
     menu.style.top = `${search.getBoundingClientRect().bottom + this.pageYOffset}px`;
+    search.placeholder = '';
   }
 
 });
@@ -60,12 +67,16 @@ function getActiveTab(event) {
 
 /* Show clicked location in search bar
  --------------------------------------------------- */
-const placeLinks = document.querySelectorAll('.submenu a')
+const placeLinks = document.querySelectorAll('.submenu a');
+const selectedOptions = document.getElementById('selected-options');
 
 for (let i = 0; i < placeLinks.length; i++) {
   placeLinks[i].addEventListener('click', function (event) {
     let li = document.createElement('li');
     li.innerHTML = event.target.innerHTML;
-    document.getElementById('selected-options').appendChild(li);
+    selectedOptions.appendChild(li);
   });
+  selectedOptions.style.left = `${search.getBoundingClientRect().left + 5}px`;
+  selectedOptions.style.top = `${search.getBoundingClientRect().bottom - 40 + this.pageYOffset}px`;
+  selectedOptions.style.width = `${search.getBoundingClientRect().width - 2}px`;
 }

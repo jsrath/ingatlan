@@ -129,6 +129,7 @@ button {
 }
 
 .search-box {
+  flex-grow: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,15 +198,17 @@ button {
 
 #selected-options {
   position: absolute;
+  z-index: 12;
 }
 
 #selected-options li {
   background-color: #ddd;
   font-size: 14px;
   display: inline;
-  margin-right: 10px;
+  margin-right: 5px;
   padding: 5px 10px;
   border-radius: 2px;
+  line-height: 3;
   list-style-type: none;
   color: #404041;
 }
@@ -213,6 +216,7 @@ button {
 .links-container {
   display: flex;
   justify-content: space-around;
+  z-index: 11;
 }
 
 .column {
@@ -462,7 +466,7 @@ hr {
   .search-container form {
     height: auto;
     flex-direction: column;
-    width: 50%;
+    width: 75%;
     height: auto;
     align-content: center;
   }
