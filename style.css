@@ -67,8 +67,8 @@ button {
   display: flex;
   background-color: #EEEEEE;
   justify-content: center;
-  height: 285px;
   align-items: center;
+  padding: 50px 0;
 }
 
 .top-container h3 {
@@ -78,6 +78,7 @@ button {
 
 .intro-text {
   padding: 30px;
+  width: auto;
 }
 
 .search-container {
